@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collectible
+  - Pickup
+  - Pickupzone
+  - collectable
+  - FinishLine
   layers:
   - Default
   - TransparentFX
