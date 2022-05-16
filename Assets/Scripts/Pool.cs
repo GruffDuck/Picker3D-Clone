@@ -42,6 +42,8 @@ public class Pool : MonoBehaviour
             FindObjectOfType<PlayerMovement>().isMove = true;
             StartCoroutine(Congrats());
         }
+        StartCoroutine(Fail());
+
     }
     IEnumerator Congrats()
     {
@@ -53,5 +55,13 @@ public class Pool : MonoBehaviour
         congratsText.text = "";
         congratsText.gameObject.SetActive(false);
         Start();
+    }
+    IEnumerator Fail()
+    {
+        yield return new WaitForSeconds(3f);
+        if (counter < count)
+        {
+            FindObjectOfType<UIManageer>().GameOver();
+        }
     }
 }
